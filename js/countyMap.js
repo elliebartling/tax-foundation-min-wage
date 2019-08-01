@@ -16,7 +16,7 @@ var width = 580,
   },
 
 // Data variables
-  dataPath = 'data/rpp-2018-county-san-jose-benchmark.csv',
+  dataPath = 'data/rpp-2018-county-wv-benchmark.csv',
   legendDataType = dataFormat.dollars,
   tooltipDataType = dataFormat.dollarsAndCents,
   countyId = 'county',
@@ -28,9 +28,9 @@ var width = 580,
   divergent = true,
 
 // Define increments for data scale
-  min = 15, //Floor for the first step
-  max = 23, //Anything above the max is the final step
-  steps = 8, //Final step represents anything at or above max
+  min = 9, //Floor for the first step
+  max = 15, //Anything above the max is the final step
+  steps = 7, //Final step represents anything at or above max
   increment = (max - min) / (steps - 1),
 
 // Color variables
