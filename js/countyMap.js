@@ -28,7 +28,7 @@ var width = 580,
   divergent = true,
 
 // Define increments for data scale
-  min = 9, //Floor for the first step
+  min = 9.30, //Floor for the first step
   max = 15, //Anything above the max is the final step
   steps = 7, //Final step represents anything at or above max
   increment = (max - min) / (steps - 1),
