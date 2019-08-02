@@ -30,15 +30,14 @@ var width = 580,
 // Define increments for data scale
   min = 9, //Floor for the first step
   max = 15, //Anything above the max is the final step
-  steps = 7, //Final step represents anything at or above max
+  steps = 6, //Final step represents anything at or above max
   increment = (max - min) / (steps - 1),
 
 // Color variables
   borderColor = '#fff', //Color of borders between states
   noDataColor = '#ddd', //Color applied when no data matches an element
   lowBaseColor = '#bf0000', //Color applied at the end of the scale with the lowest values
-  // midBaseColor = '#C7B9B9';
-  highBaseColor = '#00e32a';
+  highBaseColor = '#ff7b00';
 
 var sequentialDomain = [0, steps - 1];
 var divergentDomain = [0, (steps - 1)/2, steps - 1];
