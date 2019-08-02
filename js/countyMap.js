@@ -8,7 +8,7 @@ var width = 580,
   dataFormat = {
     percentage: d3.format('%'),
     percentageWithDecimals: d3.format(',.1%'),
-    dollars: d3.format('$,.4r'),
+    dollars: d3.format('$,'),
     dollarsAndCents: d3.format('$,.2f'),
     tens: d3.format('$,.4r'),
     hundreds: d3.format('$,.5r'),
@@ -28,7 +28,7 @@ var width = 580,
   divergent = true,
 
 // Define increments for data scale
-  min = 9.30, //Floor for the first step
+  min = 9, //Floor for the first step
   max = 15, //Anything above the max is the final step
   steps = 7, //Final step represents anything at or above max
   increment = (max - min) / (steps - 1),
@@ -36,14 +36,14 @@ var width = 580,
 // Color variables
   borderColor = '#fff', //Color of borders between states
   noDataColor = '#ddd', //Color applied when no data matches an element
-  lowBaseColor = '#d73027', //Color applied at the end of the scale with the lowest values
-  midBaseColor = '#ffffbf';
-  highBaseColor = '#4575b4';
+  lowBaseColor = '#bf0000', //Color applied at the end of the scale with the lowest values
+  // midBaseColor = '#C7B9B9';
+  // highBaseColor = '#00e32a';
 
 var sequentialDomain = [0, steps - 1];
 var divergentDomain = [0, (steps - 1)/2, steps - 1];
 var sequentialRange = [lowBaseColor, highBaseColor];
-var divergentRange = [lowBaseColor, midBaseColor, highBaseColor];
+var divergentRange = [lowBaseColor, highBaseColor];
 
 // Create distinct colors for each increment based on two base colors
 var colors = [],
